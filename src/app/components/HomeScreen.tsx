@@ -16,7 +16,7 @@ export function Credits({ logic = false }: { logic?: boolean } = {}) {
     <span className="credit-item"><span>Made by</span> <strong>Amar</strong> <small>11 Boys Blue</small></span>
   </div>;
 }
-export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage | 'flowchart' | 'logic') => void }) {
+export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage | 'flowchart' | 'logic' | 'numberSystems') => void }) {
   const [settings] = useState(loadSettings);
   const theme = getTheme(settings.theme);
   useEffect(() => {
@@ -66,6 +66,15 @@ export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage
           <path d="M 95 13 H 146 C 174 13 190 20 202 38 C 190 56 174 63 146 63 H 95 Z" />
           <circle cx="288" cy="38" r="18"/>
           <text x="24" y="27">1</text><text x="24" y="57">0</text><text x="142" y="42">AND</text><text x="288" y="43">0</text>
+        </svg>
+      </button>
+      <button className="compiler-choice" onClick={() => onChoose('numberSystems')}>
+        <div className="compiler-choice-copy">
+          <div className="compiler-choice-title"><h2>Number Systems</h2><span>Open</span></div>
+          <p>Practise binary, denary, hexadecimal, and binary addition.</p>
+        </div>
+        <svg className="compiler-choice-preview home-chart-preview" viewBox="0 0 350 76" aria-hidden="true">
+          <rect x="14" y="13" width="322" height="50" rx="6"/><path d="M37 30h276M37 46h276"/><text x="49" y="26">128</text><text x="105" y="26">64</text><text x="160" y="26">32</text><text x="215" y="26">16</text><text x="270" y="26">8</text><text x="49" y="57">1</text><text x="105" y="57">0</text><text x="160" y="57">1</text><text x="215" y="57">0</text><text x="270" y="57">1</text>
         </svg>
       </button>
     </div>

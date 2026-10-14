@@ -28,7 +28,7 @@ afterEach(async()=>{await act(async()=>root.unmount());container.remove();vi.res
 it('opens on a themed home screen with all workspace choices and creator credits',()=>{
   expect(document.title).toBe('Pico | Home');
   expect(container.querySelector('.pico-home')?.getAttribute('data-pico-theme')).toBe('catppuccin-mocha');
-  expect([...container.querySelectorAll('.compiler-choice h2')].map(h=>h.textContent)).toEqual(['Pseudocode Compiler','Python Compiler','Flowchart Builder','Logic Sim']);
+  expect([...container.querySelectorAll('.compiler-choice h2')].map(h=>h.textContent)).toEqual(['Pseudocode Compiler','Python Compiler','Flowchart Builder','Logic Sim','Number Systems']);
   expect(container.querySelector('.home-credits')?.textContent).toContain('Mustaqim');expect(container.querySelector('.home-credits')?.textContent).toContain('Amar');
   expect(container.querySelector('.compiler-choices .syntax-keyword')).not.toBeNull();
 });
